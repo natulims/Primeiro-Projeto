@@ -1,0 +1,112 @@
+/*fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@300&family=Courgette&family=Josefin+Sans&family=Quicksand:wght@500&family=Unbounded:wght@200&display=swap");
+/*scrollbar css*/
+::-webkit-scrollbar {
+  width: 1rem;
+  background-color: #2a2928;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #edc79e;
+  border-radius: 2rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff676d;
+}
+
+/*css global*/
+body {
+  background-color: #2a2928;
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+body ::-moz-selection {
+  color: rgba(252, 172, 175, 0.7254901961);
+}
+body ::selection {
+  color: rgba(252, 172, 175, 0.7254901961);
+}
+
+/*content*/
+.projects__title {
+  font-family: "Courgette", cursive;
+  font-weight: 900;
+  line-height: normal;
+  text-align: center;
+  color: #edc79e;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+.projects__text {
+  line-height: normal;
+  text-indent: 10px;
+  font-size: 1em;
+  color: #f5e9e0;
+  font-weight: normal;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+}
+.projects__img {
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+.projects .columns {
+  margin: auto 5rem;
+}
+.projects .columns__subtitle {
+  font-family: "Unbounded", cursive;
+  line-height: normal;
+  text-align: center;
+  padding: 1rem;
+  color: #edc79e;
+  font-size: 3rem;
+  font-weight: 900;
+  font-size: 2em;
+  text-align: center;
+}
+.projects .columns .column__text {
+  line-height: normal;
+  text-indent: 10px;
+  font-size: 1em;
+  color: #f5e9e0;
+  font-weight: normal;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+}
+.projects .columns .column__text a {
+  text-decoration: none;
+  color: #ff676d;
+  cursor: pointer;
+}
+
+/*footer*/
+.footer {
+  background-color: #2a2928;
+  line-height: normal;
+  text-indent: 10px;
+  font-size: 1em;
+  color: #f5e9e0;
+  font-weight: normal;
+  font-family: "Quicksand", sans-serif;
+}
+.footer__span {
+  font-size: 1.2em;
+  font-family: "Josefin Sans", sans-serif;
+  color: #edc79e;
+  font-weight: 900;
+}
+.footer__link {
+  display: inline-block;
+  font-size: 2em;
+}
+.footer__link :hover {
+  color: #ff676d;
+}
+.footer__link a {
+  text-decoration: none;
+  color: #f5e9e0;
+  cursor: pointer;
+}/*# sourceMappingURL=projects.css.map */

@@ -73,11 +73,93 @@ body {
   padding: 0;
   box-sizing: border-box;
   ::selection {
-    color: $alternative-color;
+    color: #fcacafb9;
   }
 }
 
 /*header*/
+.hero {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+  color: $text-color;
+  letter-spacing: 0.2em;
+  font-size: 15px;
+  text-align: center;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    padding: 10px 10px;
+    margin: 20px;
+  }
+
+  &__button {
+    display: flex;
+  }
+  &__btn {
+    background-color: $alternative-color;
+    padding: 10px;
+    border-radius: 1rem;
+    float: left;
+    margin-left: 6.8rem;
+
+    a {
+      text-decoration: none;
+      list-style: none;
+      color: $text-color;
+    }
+  }
+
+  &__text {
+    font-family: "Josefin Sans", sans-serif;
+    color: $text-color;
+    letter-spacing: 0.2em;
+    font-size: 2em;
+  }
+
+  &__span {
+    color: $details-color;
+    font-size: 2em;
+  }
+
+  /*typing animation*/
+  .typewriter h1 {
+    font-family: "Courgette", cursive;
+    color: $alternative-color;
+    font-weight: bold;
+    font-size: 4em;
+    overflow: hidden;
+    border-right: 0.1em solid $details-color;
+    letter-spacing: 0.3em;
+
+    //animation
+    animation: typing 4.5s steps(40, end), blink-caret 0.3s step-end infinite;
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink-caret {
+      from,
+      to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: $alternative-color;
+      }
+    }
+  }
+}
+
 /*nav*/
 
 /*about me*/
@@ -138,16 +220,21 @@ body {
 
 /*hobbies*/
 .hobbies {
+  padding: 0;
+  margin: 0;
+
   &__title {
     @include subtitle();
     text-transform: capitalize;
+    text-align: center;
   }
 
   &__info {
-    margin: auto;
+    text-align: center;
   }
 
   &__text {
+    text-align: justify;
     @include text-config();
   }
 }
@@ -167,6 +254,17 @@ body {
     text-transform: capitalize;
   }
 
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 650px;
+    max-width: 100%;
+    margin: 20px auto 25px auto;
+    gap: 10px;
+  }
+
   #name {
     text-transform: capitalize;
   }
@@ -174,7 +272,9 @@ body {
   #last-name {
     text-transform: capitalize;
   }
-
+  &__textarea {
+    margin: 0s;
+  }
   input,
   label {
     height: 2rem;
@@ -194,9 +294,9 @@ body {
   }
 
   textarea {
-    margin-left: 8rem;
     width: 50%;
     min-height: 15em;
+    resize: none;
   }
 
   input:focus,
@@ -205,6 +305,7 @@ body {
   }
 
   &__btn {
+    position: relative;
     padding: 7px 35px;
     border-radius: 1rem;
     display: inline-block;

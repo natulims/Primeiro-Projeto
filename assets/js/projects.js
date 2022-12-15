@@ -1,0 +1,1 @@
+$("body").css("backgroundColor", "#2a2928");

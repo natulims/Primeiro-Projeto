@@ -41,7 +41,23 @@
   </head>
   <body>
     <!--typewriter-->
-
+    <header class="hero">
+      <div class="hero__container">
+        <p class="hero__text">hi! my name is</p>
+        <div class="typewriter">
+          <h1 class="hero__title">natalia</h1>
+          <h2 class="hero__subtitle">
+            <span class="hero__span">designer</span> +
+            <span class="hero__span">developer</span>
+          </h2>
+          <div class="hero__button">
+            <button class="hero__btn">
+              <a href="">projects</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
     <!--about me-->
     <section class="about" id="about">
       <div class="section is-small">
@@ -118,13 +134,19 @@
     <!--hobbies-->
     <section class="hobbies" id="hobbies">
       <div class="section is-large">
-        <div class="is-align-content-space-between">
-          <h2 class="hobbies__title">hobbies</h2>
-          <article class="hobbies__info">
-            <p class="hobbies__text"></p>
-            <p class="hobbies__text"></p>
-          </article>
-        </div>
+        <h2 class="hobbies__title">hobbies</h2>
+        <article class="hobbies__info">
+          <p class="hobbies__text">
+            I don't have a lot of hobbies but drawing is my favorite thing in
+            the world, I draw since I was a kid! I've been waiting a long time
+            to feel comfortable to share my artwork. I like to spend time
+            playing games with my boyfriend or my friends, we play Final Fantasy
+            XIV together. I'm always trying to learn something new, right now
+            I'm learning about being a good Front End Developer and more about
+            Graphic Design. Some other hobbies would be cooking, studying about
+            concept art, going to music festivals and traveling.
+          </p>
+        </article>
       </div>
     </section>
     <!--end - hobbies-->
@@ -136,36 +158,40 @@
         In case you want to know more about my work just leave me a message and
         I'll answer as soon as I can!
       </p>
-      <input
-        type="text"
-        class="form__input"
-        placeholder="First Name"
-        id="name"
-        required
-      />
-      <input
-        type="text"
-        class="form__input"
-        placeholder="Last Name"
-        id="last-name"
-        required
-      />
-      <input
-        type="email"
-        class="form__input"
-        placeholder="Email"
-        id="email"
-        required
-      />
+      <div class="form__content">
+        <input
+          type="text"
+          class="form__input--name"
+          placeholder="First Name"
+          id="name"
+          required
+        />
+        <input
+          type="text"
+          class="form__input--lastname"
+          placeholder="Last Name"
+          id="last-name"
+          required
+        />
+        <input
+          type="email"
+          class="form__input--email"
+          placeholder="Email"
+          id="email"
+          required
+        />
 
-      <textarea
-        class="form__textarea"
-        rows="10"
-        placeholder="Message"
-        id="textarea"
-        required
-      ></textarea>
-      <button type="submit" class="form__btn" id="submit">Send Message</button>
+        <textarea
+          class="form__textarea"
+          rows="10"
+          placeholder="Message"
+          id="textarea"
+          required
+        ></textarea>
+        <button type="submit" class="form__btn" id="submit">
+          Send Message
+        </button>
+      </div>
     </form>
 
     <!--footer-->
