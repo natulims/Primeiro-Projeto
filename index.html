@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
 
     <!--fav icon-->
     <link rel="icon" href="" />
@@ -28,131 +30,103 @@
       rel="stylesheet"
     />
 
-    <!--bulma-->
+    <!--tailwind-->
     <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
 
     <!--main css-->
     <link rel="stylesheet" href="assets/css/main.css" />
-
-    <!--fonts-->
   </head>
   <body>
+    <!--start nav-->
+
+    <!--end nav area-->
+
+    <!--start header-->
+
     <!--typewriter-->
-    <header class="hero">
-      <div class="hero__container">
-        <p class="hero__text">hi! my name is</p>
-        <div class="typewriter">
-          <h1 class="hero__title">natalia</h1>
-          <h2 class="hero__subtitle">
-            <span class="hero__span">designer</span> +
-            <span class="hero__span">developer</span>
-          </h2>
-          <div class="hero__button">
-            <button class="hero__btn">
-              <a href="">projects</a>
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!--about me-->
-    <section class="about" id="about">
-      <div class="section is-small">
-        <h2 class="about__title">about me</h2>
-        <div class="about__content">
-          <div class="is-align-self-center">
-            <div class="is-hidden-touch">
-              <img
-                src="assets/img/Sobre mim.png"
-                alt="about me"
-                class="about__img"
-              />
-            </div>
-            <div class="is-hidden-desktop">
-              <div class="is-align-self-center">
-                <img
-                  src="assets/img/Sobre mim.png"
-                  alt=""
-                  class="about__img2"
-                />
-              </div>
-            </div>
-          </div>
-          <!--about me info-->
-          <article class="about__info">
-            <p class="about__text">
-              Hello! I'm Natalia (or natu), a brazilian illustrator and
-              Front-End developer! I love web design and learn new things to
-              improve my skills. I've always worked as a freelance illustrator
-              and now I'm learning how to be a good Front-End developer.
-            </p>
-            <p class="about__text">
-              I already made drawings for websites, games and clothes. This is
-              my first time dealing with web design and creating my own
-              websites.
-            </p>
-            <p class="about__text">
-              I like to be able to share what I do with everyone! My goal is to
-              get better creating my own websites and learn more about graphic
-              design. But I'm open to explore and try out new things that I
-              wouldn't even thought about before.
-            </p>
-          </article>
 
-          <!--skills-->
-          <h2 class="about__subtitle">my skills</h2>
-          <div class="about__skills">
-            <div class="about__list">
-              <i class="bx bxl-javascript"></i>
-            </div>
-            <div class="about__list">
-              <i class="bx bxl-html5"></i>
-            </div>
-            <div class="about__list">
-              <i class="bx bxl-css3"></i>
-            </div>
-          </div>
-          <div class="about__skills">
-            <div class="about__list">
-              <i class="bx bxl-sass"></i>
-            </div>
-            <div class="about__list">
-              <i class="bx bxl-jquery"></i>
-            </div>
-            <div class="about__list">
-              <i class="bx bxl-bootstrap"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--end - about me-->
+    <!--end typewriter area-->
 
-    <!--hobbies-->
-    <section class="hobbies" id="hobbies">
-      <div class="section is-large">
-        <h2 class="hobbies__title">hobbies</h2>
-        <article class="hobbies__info">
-          <p class="hobbies__text">
-            I don't have a lot of hobbies but drawing is my favorite thing in
-            the world, I draw since I was a kid! I've been waiting a long time
-            to feel comfortable to share my artwork. I like to spend time
-            playing games with my boyfriend or my friends, we play Final Fantasy
-            XIV together. I'm always trying to learn something new, right now
-            I'm learning about being a good Front End Developer and more about
-            Graphic Design. Some other hobbies would be cooking, studying about
-            concept art, going to music festivals and traveling.
+    <!--end header area-->
+
+    <!--start about me area-->
+    <main class="about-me" id="about-me">
+      <section class="flex flex-col m-1 align-middle text-justify">
+        <h1 class="about-me__title">About me</h1>
+        <article class="about-me__content">
+          <p class="about-me__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+            facilis qui tempore! Ducimus earum vitae impedit excepturi corrupti
+            molestiae doloribus cupiditate ut provident voluptatibus, facere
+            laudantium nihil rem atque architecto. Illum porro nostrum incidunt
+            tempora fugit quasi quae sit exercitationem, recusandae expedita
+            perspiciatis quibusdam nobis dolor, qui officia, saepe alias
+            voluptatibus nisi laudantium repellendus soluta pariatur inventore!
+            Consectetur, doloremque! Adipisci!
           </p>
+          <p class="about-me__text">
+            <!--skills-->
+          <ul class="grid grid-cols-2 text-left leading-4 tracking-normal md:w-48 sm:w-80">
+          <li class="about-me__list"><span class="icon"><i class='bx bxs-right-arrow'></i> JavaScript</span></li>
+          <li class="about-me__list"><span class="icon"><i class='bx bxs-right-arrow'></i> Jquery</span></li>
+          <li class="about-me__list"><span class="icon"><i class='bx bxs-right-arrow'></i> HTML</span></li>
+          <li class="about-me__list"><span class="icon"><i class='bx bxs-right-arrow'></i> CSS</span></li>
+          <li class="about-me__list"><span class="icon"><i class='bx bxs-right-arrow'></i> Tailwind</span></li>
+          <li class="about-me__list"><span class="icon"><i class='bx bxs-right-arrow'></i> Bootstrap</span></li>
+        </ul>
+      </p>
         </article>
-      </div>
-    </section>
-    <!--end - hobbies-->
+      </section>
+    </main>
+    <!--end about me area-->
 
-    <!--contact-->
-    <form action="" class="form">
+    <!--start hobbies area-->
+    <article class="hobbies" id="hobbies">
+      <div class="p-1 text-justify content-center capitalize col-auto">
+        <h2 class="hobbies__title">Hobbies</h2>
+        <div class="hobbies__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta
+          provident voluptatibus ullam adipisci dolorem, suscipit nostrum
+          deserunt excepturi, molestias corrupti pariatur unde optio!
+          Architecto, doloribus facere! Laudantium, sint animi! Illum, nulla.
+        </div>
+        <div class="grid grid-cols-2 gap-2 m-2">
+          <!-- <div class="hobbies__content"> -->
+          <div class="hobbies__item">
+            <img
+              src="https://i.pinimg.com/originals/40/9b/70/409b70e939be22f6db9c1dfc40a08c7d.jpg"
+              alt=""
+            />
+          </div>
+          <div class="hobbies__item">
+            <img
+              src="https://i.pinimg.com/originals/40/9b/70/409b70e939be22f6db9c1dfc40a08c7d.jpg"
+              alt=""
+            />
+          </div>
+          <div class="hobbies__item">
+            <img
+              src="https://i.pinimg.com/originals/40/9b/70/409b70e939be22f6db9c1dfc40a08c7d.jpg"
+              alt=""
+            />
+          </div>
+          <div class="hobbies__item">
+            <img
+              src="https://i.pinimg.com/originals/40/9b/70/409b70e939be22f6db9c1dfc40a08c7d.jpg"
+              alt=""
+            />
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </article>
+    <!--end hobbies area-->
+
+    <!--start contact me area-->
+    <form class="form">
       <h2 class="form__title">Get in touch</h2>
       <p class="form__text">
         In case you want to know more about my work just leave me a message and
@@ -193,11 +167,14 @@
         </button>
       </div>
     </form>
+    <!--end contact me area-->
 
-    <!--footer-->
+    <!--start footer area-->
     <footer class="footer">
-      <div class="footer__container">
-        <div class="content has-text-centered">
+      <div
+        class="flex flex-wrap justify-center p-1 md\:-m-2 text-center gap-1 m-1"
+      >
+        <div class="footer__container">
           <span class="footer__span">Copyright &copy;2022</span>
           <p class="footer__text">
             <span class="footer__span">Template made by:</span>
@@ -228,8 +205,9 @@
         </div>
       </div>
     </footer>
-    <!--end footer-->
+    <!--end footer area-->
+
+    <!--scripts-->
     <script src="assets/js/main.js"></script>
   </body>
-  <!--script-->
 </html>
