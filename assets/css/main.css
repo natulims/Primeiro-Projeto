@@ -1,5 +1,23 @@
 /*fonts*/
 @import url("https://fonts.googleapis.com/css2?family=Changa:wght@300&family=Courgette&family=Josefin+Sans&family=Quicksand:wght@500&family=Unbounded:wght@200&display=swap");
+@font-face {
+  font-family: "Sunflower";
+  src: url("../font/sunflower.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Magnitude";
+  src: url("../font/Magnitude.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Panton Narrow";
+  src: url("../font/PantonNarrow.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /*scrollbar css*/
 ::-webkit-scrollbar {
   width: 1rem;
@@ -29,7 +47,10 @@ body ::selection {
 }
 
 /*header*/
-.hero {
+.header .hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   margin: 0;
   padding: 0;
   font-family: "Josefin Sans", sans-serif;
@@ -40,7 +61,13 @@ body ::selection {
   align-items: center;
   /*typing animation*/
 }
-.hero__container {
+@media screen and (max-width: 860px) {
+  .header .hero {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.header .hero__container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -48,32 +75,38 @@ body ::selection {
   padding: 10px 10px;
   margin: 20px;
 }
-.hero__button {
+.header .hero__button {
   display: flex;
 }
-.hero__btn {
+.header .hero__btn {
   background-color: #ff676d;
-  padding: 10px;
+  padding: 1rem;
+  font-size: 1.5rem;
   border-radius: 1rem;
-  float: left;
-  margin-left: 6.8rem;
+  width: 10rem;
+  margin-left: 5rem;
 }
-.hero__btn a {
+.header .hero__btn a {
   text-decoration: none;
   list-style: none;
   color: #f5e9e0;
 }
-.hero__text {
+@media screen and (max-width: 860px) {
+  .header .hero__btn {
+    margin-left: 45px;
+  }
+}
+.header .hero__text {
   font-family: "Josefin Sans", sans-serif;
   color: #f5e9e0;
   letter-spacing: 0.2em;
   font-size: 2em;
 }
-.hero__span {
+.header .hero__span {
   color: #edc79e;
-  font-size: 2em;
+  font-size: 1.5em;
 }
-.hero .typewriter h1 {
+.header .hero__typewriter h1 {
   font-family: "Courgette", cursive;
   color: #ff676d;
   font-weight: bold;
@@ -119,22 +152,8 @@ body ::selection {
 
 /*nav*/
 /*about me*/
-.about {
-  display: flex;
-  flex-direction: column;
-}
-.about__img {
-  display: block;
-  margin: auto auto;
-  width: 20%;
-}
-.about__img2 {
-  display: block;
-  margin: auto auto;
-  width: 60%;
-}
-.about__title {
-  font-family: "Unbounded", cursive;
+.about-me__title {
+  font-family: "Magnitude";
   line-height: normal;
   text-align: center;
   padding: 1rem;
@@ -143,47 +162,32 @@ body ::selection {
   font-weight: 900;
   text-transform: capitalize;
 }
-.about__subtitle {
-  font-family: "Unbounded", cursive;
+.about-me__text {
   line-height: normal;
-  text-align: center;
-  padding: 1rem;
-  color: #edc79e;
-  font-size: 3rem;
-  font-weight: 900;
-  text-transform: capitalize;
-}
-.about__text {
-  line-height: normal;
-  text-indent: 10px;
   text-align: justify;
   font-size: 1em;
   color: #f5e9e0;
   font-weight: normal;
   font-family: "Quicksand", sans-serif;
 }
-.about__skills {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  font-size: 10rem;
-  color: #f5e9e0;
-}
-@media only screen and (max-width: 880px) {
-  .about__skills {
-    display: flex;
-    flex-direction: column;
-    font-size: 5em;
-  }
-}
-.about__skills :hover {
+.about-me__span {
   color: #ff676d;
-  cursor: pointer;
+}
+.about-me__list {
+  line-height: normal;
+  text-align: justify;
+  font-size: 1em;
+  color: #f5e9e0;
+  font-weight: normal;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  padding: 10px;
+  left: 60px;
+  margin: 0;
+  gap: 2em;
+}
+.about-me__list .icon {
+  color: #edc79e;
 }
 
 /*end - about me*/
@@ -193,7 +197,7 @@ body ::selection {
   margin: 0;
 }
 .hobbies__title {
-  font-family: "Unbounded", cursive;
+  font-family: "Magnitude";
   line-height: normal;
   text-align: center;
   padding: 1rem;
@@ -209,7 +213,6 @@ body ::selection {
 .hobbies__text {
   text-align: justify;
   line-height: normal;
-  text-indent: 10px;
   text-align: justify;
   font-size: 1em;
   color: #f5e9e0;
@@ -229,7 +232,7 @@ body ::selection {
   font-family: "Quicksand", sans-serif;
 }
 .form__title {
-  font-family: "Unbounded", cursive;
+  font-family: "Magnitude";
   line-height: normal;
   text-align: center;
   padding: 1rem;
@@ -307,7 +310,6 @@ body ::selection {
 .footer {
   background-color: #2a2928;
   line-height: normal;
-  text-indent: 10px;
   text-align: justify;
   font-size: 1em;
   color: #f5e9e0;

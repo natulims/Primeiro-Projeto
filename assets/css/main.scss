@@ -1,6 +1,27 @@
 /*fonts*/
 @import url("https://fonts.googleapis.com/css2?family=Changa:wght@300&family=Courgette&family=Josefin+Sans&family=Quicksand:wght@500&family=Unbounded:wght@200&display=swap");
 
+@font-face {
+  font-family: "Sunflower";
+  src: url("../font/sunflower.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Magnitude";
+  src: url("../font/Magnitude.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Panton Narrow";
+  src: url("../font/PantonNarrow.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 //color palette
 $background-color: #2a2928;
 $details-color: #edc79e;
@@ -25,7 +46,7 @@ $alternative-color: #ff676d;
 
 //title
 @mixin title {
-  font-family: "Courgette", cursive;
+  font-family: "Panton Narrow";
   font-weight: 900;
   line-height: normal;
   text-align: center;
@@ -34,7 +55,7 @@ $alternative-color: #ff676d;
 
 //subtitle
 @mixin subtitle {
-  font-family: "Unbounded", cursive;
+  font-family: "Magnitude";
   line-height: normal;
   text-align: center;
   padding: 1rem;
@@ -51,7 +72,6 @@ $alternative-color: #ff676d;
 //normal text
 @mixin text-config {
   line-height: normal;
-  text-indent: 10px;
   text-align: justify;
   font-size: 1em;
   color: $text-color;
@@ -78,112 +98,107 @@ body {
 }
 
 /*header*/
-.hero {
-  margin: 0;
-  padding: 0;
-  font-family: "Josefin Sans", sans-serif;
-  color: $text-color;
-  letter-spacing: 0.2em;
-  font-size: 15px;
-  text-align: center;
-  align-items: center;
 
-  &__container {
+.header {
+  .hero {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: left;
-    padding: 10px 10px;
-    margin: 20px;
-  }
-
-  &__button {
-    display: flex;
-  }
-  &__btn {
-    background-color: $alternative-color;
-    padding: 10px;
-    border-radius: 1rem;
-    float: left;
-    margin-left: 6.8rem;
-
-    a {
-      text-decoration: none;
-      list-style: none;
-      color: $text-color;
-    }
-  }
-
-  &__text {
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
     font-family: "Josefin Sans", sans-serif;
     color: $text-color;
     letter-spacing: 0.2em;
-    font-size: 2em;
-  }
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
 
-  &__span {
-    color: $details-color;
-    font-size: 2em;
-  }
+    @media screen and (max-width: 860px) {
+      display: flex;
+      flex-direction: column;
+    }
 
-  /*typing animation*/
-  .typewriter h1 {
-    font-family: "Courgette", cursive;
-    color: $alternative-color;
-    font-weight: bold;
-    font-size: 4em;
-    overflow: hidden;
-    border-right: 0.1em solid $details-color;
-    letter-spacing: 0.3em;
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: left;
+      padding: 10px 10px;
+      margin: 20px;
+    }
 
-    //animation
-    animation: typing 4.5s steps(40, end), blink-caret 0.3s step-end infinite;
-
-    @keyframes typing {
-      from {
-        width: 0;
+    &__button {
+      display: flex;
+    }
+    &__btn {
+      background-color: $alternative-color;
+      padding: 1rem;
+      font-size: 1.5rem;
+      border-radius: 1rem;
+      width: 10rem;
+      margin-left: 5rem;
+      a {
+        text-decoration: none;
+        list-style: none;
+        color: $text-color;
       }
-      to {
-        width: 100%;
+
+      @media screen and (max-width: 860px) {
+        margin-left: 45px;
       }
     }
 
-    @keyframes blink-caret {
-      from,
-      to {
-        border-color: transparent;
+    &__text {
+      font-family: "Josefin Sans", sans-serif;
+      color: $text-color;
+      letter-spacing: 0.2em;
+      font-size: 2em;
+    }
+
+    &__span {
+      color: $details-color;
+      font-size: 1.5em;
+    }
+
+    /*typing animation*/
+    &__typewriter h1 {
+      font-family: "Courgette", cursive;
+      color: $alternative-color;
+      font-weight: bold;
+      font-size: 4em;
+      overflow: hidden;
+      border-right: 0.1em solid $details-color;
+      letter-spacing: 0.3em;
+
+      //animation
+      animation: typing 4.5s steps(40, end), blink-caret 0.3s step-end infinite;
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
       }
-      50% {
-        border-color: $alternative-color;
+
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: $alternative-color;
+        }
       }
     }
   }
 }
-
 /*nav*/
 
 /*about me*/
-.about {
-  display: flex;
-  flex-direction: column;
-  &__img {
-    display: block;
-    margin: auto auto;
-    width: 20%;
-  }
-
-  &__img2 {
-    display: block;
-    margin: auto auto;
-    width: 60%;
-  }
-
+.about-me {
   &__title {
-    @include subtitle();
-    text-transform: capitalize;
-  }
-
-  &__subtitle {
     @include subtitle();
     text-transform: capitalize;
   }
@@ -192,27 +207,19 @@ body {
     @include text-config();
   }
 
-  &__skills {
-    padding: 0;
-    margin: 0;
+  &__span {
+    color: $alternative-color;
+  }
+
+  &__list {
+    @include text-config();
     display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    font-size: 10rem;
-    color: $text-color;
-
-    @media only screen and (max-width: 880px) {
-      display: flex;
-      flex-direction: column;
-      font-size: 5em;
-    }
-
-    :hover {
-      color: $alternative-color;
-      cursor: pointer;
+    padding: 10px;
+    left: 60px;
+    margin: 0;
+    gap: 2em;
+    .icon {
+      color: $details-color;
     }
   }
 }
